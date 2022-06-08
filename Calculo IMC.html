@@ -1,0 +1,55 @@
+<!-- Programa para calcular IMC -->
+<!-- Classificação Segundo a OMS a partir do IMC
+	Menor do que 18.5 -> Abaixo do peso normal;
+    De 18.5 a 24.9    -> Peso normal;
+	De 25.0 a 29.9    -> Excesso de peso;
+	De 30.0 a 34.9    -> Obesidade classe 1;
+	De 35.0 a 39.9    -> Obesidade classe 2;
+	Maior ou igual a 40.0 -> Obesidade classe 2; -->
+
+<meta charset = "UTF-8">
+ 
+<script>
+
+	function pulaLinha() {
+		document.write("<br>");
+	    document.write("<br>");
+	}
+
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function calculaImc(altura,peso) {
+     return peso / (altura * altura);
+    }
+    
+    var nome = prompt("Digite seu nome")
+    var alturaInformada = prompt("Informe sua Altura");
+    var pesoInformado = prompt("Informe seu Peso");
+    var imc = calculaImc (alturaInformada,pesoInformado);
+
+         mostra(nome + " Seu imc é " + imc);
+
+    if(imc < 18.5) {
+    	 mostra("Você está abaixo do peso normal");
+   
+    }else if(imc >= 18.5 && imc <= 24.9) {
+     	 mostra("Peso Normal");
+     
+     }else if( imc >= 25.0 && imc <= 29.9) {
+     	mostra("Excesso de peso");
+
+     }else if(imc >= 30.0 && imc <= 34.9) {
+     	mostra("Obesidade clase 1");
+
+     }else if(imc >= 35.0 && imc <= 39.9) {
+     	mostra("Obesidade classe 2");
+
+     }else if(imc >= 40.0) {
+     	mostra("Obesidade classe 3");
+
+     }
+	
+</script>
